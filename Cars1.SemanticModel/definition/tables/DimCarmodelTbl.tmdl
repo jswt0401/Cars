@@ -3,28 +3,43 @@ table DimCarmodelTbl
 
 	column ModelID
 		lineageTag: 3365da06-0477-4c4a-be01-dd3031796c79
+		summarizeBy: count
 		isNameInferred
 		sourceColumn: [ModelID]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Maerke
 		lineageTag: 076f547e-2cf2-403e-adfe-36c597214631
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Maerke]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Model
 		lineageTag: a3537687-9fa8-4a49-903e-1fcb4551f75c
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Model]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Segment
 		lineageTag: 99330510-9618-46a7-93bf-a2e7f7965826
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Segment]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Raekkeviddekm
 		lineageTag: ad51ede5-b98c-4b86-9324-a839801ba978
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Raekkeviddekm]
+
+		annotation SummarizationSetBy = Automatic
 
 	partition DimCarmodelTbl = calculated
 		mode: import

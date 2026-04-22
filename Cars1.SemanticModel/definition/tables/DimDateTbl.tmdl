@@ -3,38 +3,59 @@ table DimDateTbl
 
 	column Date
 		lineageTag: f5709bdc-63c5-4fd7-859c-1ab787f1b14b
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Date]
 
+		annotation SummarizationSetBy = Automatic
+
 	column DateID
 		lineageTag: 87240037-9403-4aed-9574-7a656a75da15
+		summarizeBy: count
 		isNameInferred
 		sourceColumn: [DateID]
 
+		annotation SummarizationSetBy = Automatic
+
 	column År
 		lineageTag: 969b7b72-4d41-48f3-85f7-1236aa7b0ea1
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [År]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Måned
 		lineageTag: 27439be5-b173-4352-b42f-f0174f13ea09
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Måned]
 
+		annotation SummarizationSetBy = Automatic
+
 	column MånedNavn
 		lineageTag: 22e07c2a-d864-4b1f-a0c0-981c835d9923
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [MånedNavn]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Kvartal
 		lineageTag: 9f93ac26-30bd-4aaa-a951-4ddd10547964
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Kvartal]
 
+		annotation SummarizationSetBy = Automatic
+
 	column UgeDag
 		lineageTag: f0085689-87f7-4598-9445-f8f0441dabd3
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [UgeDag]
+
+		annotation SummarizationSetBy = Automatic
 
 	partition DimDateTbl = calculated
 		mode: import

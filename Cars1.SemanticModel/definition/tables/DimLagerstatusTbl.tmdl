@@ -3,18 +3,27 @@ table DimLagerstatusTbl
 
 	column LagerID
 		lineageTag: cc89c057-fd9b-428e-bce8-a2bd904c2914
+		summarizeBy: count
 		isNameInferred
 		sourceColumn: [LagerID]
 
+		annotation SummarizationSetBy = Automatic
+
 	column LagerStatus
 		lineageTag: 6999c761-be94-465c-8e93-43dd136ce8c5
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [LagerStatus]
 
+		annotation SummarizationSetBy = Automatic
+
 	column Beskrivelse
 		lineageTag: 013fdba0-f809-4b24-81be-124f43b703d9
+		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Beskrivelse]
+
+		annotation SummarizationSetBy = Automatic
 
 	partition DimLagerstatusTbl = calculated
 		mode: import
