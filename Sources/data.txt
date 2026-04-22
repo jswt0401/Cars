@@ -1,0 +1,51 @@
+ID;Dato;Mærke;Model;Variant;Aargang;Km;Farve;Pris;Status;Saelger;KundeID;Finansiering;Garanti;Ekstraudstyr;Rabat;Moms;Nettopris;Forsikring;Afdeling
+1;01-05;VW;Golf;Life;2022;15000;Sort;250000;Solgt;Jensen;C101;Bank;24;Soltag;5000;50000;195000;Ja;KBH
+2;02-05;Tesla;Model 3;Long Range;2023;5000;Hvid;350000;Solgt;Nielsen;C102;Leasing;36;Autopilot;0;70000;280000;Nej;Aarhus
+3;03-05;Audi;A4;Avant;2021;45000;Graa;320000;Reserveret;Hansen;C103;Kontant;12;Laeder;10000;64000;246000;Ja;Odense
+4;04-05;BMW;3-serie;M-Sport;2020;60000;Blaa;280000;Solgt;Jensen;C104;Bank;12;M-pakke;2000;56000;222000;Ja;KBH
+5;05-05;Toyota;Aygo;x-play;2023;2000;Rod;120000;Solgt;Olsen;C105;Kontant;36;Kamera;0;24000;96000;Nej;Aalborg
+6;06-05;Ford;Focus;ST-Line;2022;25000;Solv;210000;Solgt;Nielsen;C106;Bank;24;Navi;3000;42000;165000;Ja;KBH
+7;07-05;Volvo;XC40;Recharge;2023;8000;Sort;400000;Solgt;Hansen;C107;Leasing;36;El-saeder;5000;80000;315000;Ja;Aarhus
+8;08-05;Skoda;Octavia;Combi;2021;35000;Blaa;230000;Solgt;Olsen;C108;Bank;12;Anhaengertraek;1000;46000;183000;Nej;Odense
+9;09-05;Kia;Niro;EV;2024;500;Hvid;290000;Solgt;Jensen;C109;Leasing;60;Varmepumpe;0;58000;232000;Nej;KBH
+10;10-05;Mercedes;C200;AMG;2022;20000;Sort;450000;Solgt;Nielsen;C110;Bank;24;Premiumpakke;10000;90000;350000;Ja;Aarhus
+11;11-05;VW;Polo;Style;2021;30000;Hvid;180000;Solgt;Hansen;C111;Bank;12;Carplay;2000;36000;142000;Ja;KBH
+12;12-05;Tesla;Model Y;Performance;2023;12000;Sort;420000;Solgt;Jensen;C112;Leasing;36;FSD;0;84000;336000;Ja;Aarhus
+13;13-05;Audi;Q5;S-Line;2020;55000;Graa;380000;Solgt;Olsen;C113;Bank;12;Panorama;5000;76000;299000;Ja;Odense
+14;14-05;BMW;X5;xDrive;2022;22000;Sort;650000;Solgt;Nielsen;C114;Leasing;36;Laserlys;15000;130000;505000;Ja;KBH
+15;15-05;Toyota;Corolla;Hybrid;2023;10000;Blaa;240000;Solgt;Hansen;C115;Kontant;36;T-Mate;0;48000;192000;Nej;Aalborg
+16;16-05;Ford;Kuga;Plug-in;2022;28000;Rod;260000;Solgt;Jensen;C116;Bank;24;Vinterpakke;4000;52000;204000;Ja;KBH
+17;17-05;Volvo;V60;Cross;2021;40000;Solv;310000;Solgt;Olsen;C117;Bank;12;AWD;2000;62000;246000;Ja;Aarhus
+18;18-05;Skoda;Fabia;Ambition;2023;5000;Graa;140000;Solgt;Nielsen;C118;Kontant;36;Park-sensor;0;28000;112000;Nej;Odense
+19;19-05;Kia;Ceed;SW;2022;18000;Hvid;190000;Solgt;Hansen;C119;Bank;24;Tagbojler;1000;38000;151000;Ja;KBH
+20;20-05;Mercedes;E300;EQ;2023;9000;Sort;550000;Solgt;Jensen;C120;Leasing;36;Air-balance;10000;110000;430000;Ja;Aarhus
+21;21-05;VW;T-Roc;Sport;2021;32000;Blaa;220000;Solgt;Olsen;C121;Bank;12;Sport-pakke;2000;44000;174000;Ja;KBH
+22;22-05;Tesla;Model S;Plaid;2023;4000;Rod;850000;Solgt;Nielsen;C122;Leasing;36;Yoke;20000;170000;660000;Ja;Aarhus
+23;23-05;Audi;A3;Sportback;2022;15000;Sort;240000;Solgt;Hansen;C123;Bank;24;Matrix-LED;3000;48000;189000;Ja;Odense
+24;24-05;BMW;5-serie;Touring;2021;48000;Graa;420000;Solgt;Jensen;C124;Bank;12;Komfort;5000;84000;331000;Ja;KBH
+25;25-05;Toyota;RAV4;Hybrid;2023;7000;Solv;330000;Solgt;Olsen;C125;Leasing;36;Offroad;0;66000;264000;Ja;Aalborg
+26;26-05;Ford;Mustang;Mach-E;2022;12000;Hvid;380000;Solgt;Nielsen;C126;Bank;24;Teknik-pakke;7000;76000;297000;Ja;KBH
+27;27-05;Volvo;XC60;Inscription;2020;65000;Sort;390000;Solgt;Hansen;C127;Kontant;12;BowersWilkins;10000;78000;302000;Ja;Aarhus
+28;28-05;Skoda;Enyaq;iV80;2023;6000;Blaa;360000;Solgt;Olsen;C128;Leasing;36;Sportline;0;72000;288000;Ja;Odense
+29;29-05;Kia;Sportage;HEV;2024;200;Graa;310000;Solgt;Jensen;C129;Bank;60;Safety;0;62000;248000;Nej;KBH
+30;30-05;Mercedes;A200;AMG;2022;22000;Rod;300000;Solgt;Nielsen;C130;Bank;24;Night-pakke;4000;60000;236000;Ja;Aarhus
+31;31-05;VW;Arteon;ShootingB;2021;28000;Sort;350000;Solgt;Hansen;C131;Bank;12;Dynaudio;5000;70000;275000;Ja;KBH
+32;01-06;Tesla;Model 3;Standard;2022;25000;Blaa;290000;Solgt;Jensen;C132;Bank;24;Hvid-interior;2000;58000;230000;Ja;Aarhus
+33;02-06;Audi;Q3;Sportback;2023;8000;Hvid;320000;Solgt;Olsen;C133;Leasing;36;S-line-plus;0;64000;256000;Ja;Odense
+34;03-06;BMW;i4;eDrive40;2023;10000;Solv;410000;Solgt;Nielsen;C134;Bank;36;Laser;5000;82000;323000;Ja;KBH
+35;04-06;Toyota;Yaris;Cross;2023;4000;Graa;200000;Solgt;Hansen;C135;Kontant;36;Aktiv-pakke;0;40000;160000;Nej;Aalborg
+36;05-06;Ford;Puma;Mild-Hybrid;2022;19000;Rod;180000;Solgt;Jensen;C136;Bank;24;Design-pakke;1000;36000;143000;Ja;KBH
+37;06-06;Volvo;S90;Recharge;2021;35000;Sort;440000;Solgt;Olsen;C137;Leasing;12;Vent-saeder;8000;88000;344000;Ja;Aarhus
+38;07-06;Skoda;Karoq;Ambition;2022;24000;Blaa;210000;Solgt;Nielsen;C138;Bank;24;Tagrails;2000;42000;166000;Ja;Odense
+39;08-06;Kia;EV6;GT-Line;2023;9000;Hvid;430000;Solgt;Hansen;C139;Leasing;36;Head-up;0;86000;344000;Ja;KBH
+40;09-06;Mercedes;GLC;300;2022;25000;Graa;520000;Solgt;Jensen;C140;Bank;24;Offroad-pack;10000;104000;406000;Ja;Aarhus
+41;10-06;VW;Tiguan;Life;2021;38000;Sort;270000;Solgt;Olsen;C141;Bank;12;Trailer-pack;3000;54000;213000;Ja;KBH
+42;11-06;Tesla;Model X;Plaid;2023;5000;Sort;950000;Solgt;Nielsen;C142;Leasing;36;FSD-super;20000;190000;740000;Ja;Aarhus
+43;12-06;Audi;RS3;Sportback;2022;12000;Grøn;550000;Solgt;Hansen;C143;Bank;24;RS-Design;10000;110000;430000;Ja;Odense
+44;13-06;BMW;M3;Competition;2021;20000;Sort;880000;Solgt;Jensen;C144;Kontant;12;Carbon-pakke;20000;176000;684000;Ja;KBH
+45;14-06;Toyota;Camry;Hybrid;2022;22000;Solv;290000;Solgt;Olsen;C145;Bank;24;Executive;5000;58000;227000;Ja;Aalborg
+46;15-06;Ford;Mondeo;Titanium;2020;70000;Graa;190000;Solgt;Nielsen;C146;Bank;12;Luksus;2000;38000;150000;Ja;KBH
+47;16-06;Volvo;V90;Cross;2022;15000;Hvid;480000;Solgt;Hansen;C147;Leasing;36;Polestar;5000;96000;379000;Ja;Aarhus
+48;17-06;Skoda;Superb;LaurinK;2023;8000;Sort;370000;Solgt;Olsen;C148;Bank;36;Massage-saede;5000;74000;291000;Ja;Odense
+49;18-06;Kia;Sorento;PHEV;2023;10000;Blaa;450000;Solgt;Jensen;C149;Leasing;36;Panoramaglas;0;90000;360000;Ja;KBH
+50;19-06;Mercedes;S500;EQ;2024;1000;Sort;1200000;Solgt;Nielsen;C150;Leasing;36;Chauffeur-pak;50000;240000;910000;Ja;Aarhus
