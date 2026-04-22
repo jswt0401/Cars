@@ -8,11 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["factbiler"]
+annotation PBI_QueryOrder = ["Biler"]
 
 annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
-ref table factbiler
+ref table Biler
 ref table DimDateTbl
 ref table DimCarmodelTbl
 ref table DimLagerstatusTbl

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "5de8f0df2bbd9931e0ec",
+  "position": {
+    "x": 10,
+    "y": 0,
+    "z": 0,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Biler"
+                    }
+                  },
+                  "Property": "Model"
+                }
+              },
+              "queryRef": "factbiler.Model",
+              "nativeQueryRef": "Model"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MeasureTbl"
+                    }
+                  },
+                  "Property": "Total sales"
+                }
+              },
+              "queryRef": "MeasureTbl.Total sales",
+              "nativeQueryRef": "Total sales"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0546068662203a301c01",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Biler"
+              }
+            },
+            "Property": "Model"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "64f56398069b5d6562e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "MeasureTbl"
+              }
+            },
+            "Property": "Total sales"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

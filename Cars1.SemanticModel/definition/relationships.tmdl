@@ -1,12 +1,12 @@
 relationship factbiler_Status_DimLagerstatusTbl_LagerStatus
-	fromColumn: factbiler.Status
+	fromColumn: Biler.Status
 	toColumn: DimLagerstatusTbl.LagerStatus
 
 relationship factbiler_DatoDateID_DimDateTbl_DateID
-	fromColumn: factbiler.DatoDateID
+	fromColumn: Biler.DatoDateID
 	toColumn: DimDateTbl.DateID
 
 relationship factbiler_Model_DimCarmodelTbl_Model
-	fromColumn: factbiler.Model
+	fromColumn: Biler.Model
 	toColumn: DimCarmodelTbl.Model
 

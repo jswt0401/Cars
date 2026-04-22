@@ -10,19 +10,6 @@
       "nodes": [
         {
           "location": {
-            "x": 721,
-            "y": 97
-          },
-          "nodeIndex": "factbiler",
-          "nodeLineageTag": "863305ac-7097-4721-a0b9-e63ad6d5446b",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 284,
             "y": 0
           },
@@ -69,6 +56,18 @@
           "nodeLineageTag": "be53532e-0eb0-4560-a10d-ffb6c281ec95",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 721,
+            "y": 97
+          },
+          "nodeIndex": "Biler",
+          "size": {
+            "height": 248,
             "width": 234
           },
           "zIndex": 0

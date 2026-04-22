@@ -1,4 +1,4 @@
-table factbiler
+table Biler
 	lineageTag: 863305ac-7097-4721-a0b9-e63ad6d5446b
 
 	column ID
@@ -161,19 +161,19 @@ table factbiler
 
 		annotation SummarizationSetBy = Automatic
 
-	column Afdeling
+	column AfdelingX
 		dataType: string
 		lineageTag: 1fd9a43d-0c6d-4552-a400-42c762fc259b
 		summarizeBy: none
-		sourceColumn: Afdeling
+		sourceColumn: AfdelingX
 
 		annotation SummarizationSetBy = Automatic
 
-	column DatoDateID = 20250000 + VALUE(MID(factbiler[Dato],4,2))*100 + VALUE(LEFT(factbiler[Dato],2))
+	column DatoDateID = 20250000 + VALUE(MID(Biler[Dato],4,2))*100 + VALUE(LEFT(Biler[Dato],2))
 		dataType: int64
 		lineageTag: 5cac3cbe-05a9-4e51-8b31-099f143f2fc5
 
-	partition factbiler = m
+	partition Biler = m
 		mode: import
 		source =
 				let
@@ -186,9 +186,12 @@ table factbiler
 				        {"ID", Int64.Type}, {"Aargang", Int64.Type}, {"Km", Int64.Type},
 				        {"Pris", Int64.Type}, {"Garanti", Int64.Type}, {"Rabat", Int64.Type},
 				        {"Moms", Int64.Type}, {"Nettopris", Int64.Type}
-				    })
+				    }),
+				    #"Omdøbte kolonner" = Table.RenameColumns(TypeChange,{{"Afdeling", "AfdelingX"}})
 				in
-				    TypeChange
+				    #"Omdøbte kolonner"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navigation
 
