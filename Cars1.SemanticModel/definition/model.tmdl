@@ -13,10 +13,10 @@ annotation PBI_QueryOrder = ["Biler"]
 annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
 ref table Biler
-ref table DimDateTbl
-ref table DimCarmodelTbl
-ref table DimLagerstatusTbl
 ref table MeasureTbl
+ref table DimDateTbl
+ref table DimLagerstatusTbl
+ref table DimCarmodelTbl
 
 ref cultureInfo da-DK
 

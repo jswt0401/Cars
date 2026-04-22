@@ -1,42 +1,27 @@
 table DimLagerstatusTbl
-	lineageTag: cc52cb0f-54a2-413e-97e5-ee438e0e0cd1
-
-	column LagerID
-		lineageTag: cc89c057-fd9b-428e-bce8-a2bd904c2914
-		summarizeBy: count
-		isNameInferred
-		sourceColumn: [LagerID]
-
-		annotation SummarizationSetBy = Automatic
+	lineageTag: 6815c055-7f9d-4e28-87c4-c8e4f3d9f35c
 
 	column LagerStatus
-		lineageTag: 6999c761-be94-465c-8e93-43dd136ce8c5
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [LagerStatus]
+		dataType: string
+		lineageTag: f58f13bd-ae53-4b78-8ce8-fcc94a4ab289
+		sourceColumn: LagerStatus
 
-		annotation SummarizationSetBy = Automatic
+	column StatusBeskrivelse
+		dataType: string
+		lineageTag: f227b539-9db0-4503-a5d5-aa0c0ea4b3c0
+		sourceColumn: StatusBeskrivelse
 
-	column Beskrivelse
-		lineageTag: 013fdba0-f809-4b24-81be-124f43b703d9
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [Beskrivelse]
-
-		annotation SummarizationSetBy = Automatic
-
-	partition DimLagerstatusTbl = calculated
+	partition DimLagerstatusTbl = m
 		mode: import
 		source =
-				DATATABLE(
-				    "LagerID",    INTEGER,
-				    "LagerStatus",STRING,
-				    "Beskrivelse", STRING,
-				    {
-				        {1,"Paa lager",  "Bilen er paa lager og klar til levering"},
-				        {2,"Reserveret","Bilen er reserveret af en kunde"},
-				        {3,"I transit", "Bilen er undervejs fra producenten"},
-				        {4,"Bestilt",   "Bilen er bestilt men ikke modtaget"}
-				    }
-				)
+				let
+				    Source = Table.FromRows({
+				        {"Solgt", "Bil er solgt"},
+				        {"Lager", "Bil på lager"},
+				        {"Reserveret", "Bil er reserveret"},
+				        {"Bestilt", "Bil er bestilt"},
+				        {"Returneret", "Bil returneret"}
+				    }, {"LagerStatus", "StatusBeskrivelse"})
+				in
+				    Source
 

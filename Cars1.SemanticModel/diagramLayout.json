@@ -10,47 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 284,
-            "y": 0
-          },
-          "nodeIndex": "DimDateTbl",
-          "nodeLineageTag": "771cc124-c2e3-4304-9744-ba916f5f2625",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 858,
-            "y": 679
-          },
-          "nodeIndex": "DimCarmodelTbl",
-          "nodeLineageTag": "7679a069-e72c-4bd0-b070-f6cfa8219541",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1334,
-            "y": 54
-          },
-          "nodeIndex": "DimLagerstatusTbl",
-          "nodeLineageTag": "cc52cb0f-54a2-413e-97e5-ee438e0e0cd1",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1334,
-            "y": 339.5
+            "x": 1044,
+            "y": 427.875
           },
           "nodeIndex": "MeasureTbl",
           "nodeLineageTag": "be53532e-0eb0-4560-a10d-ffb6c281ec95",
@@ -62,12 +23,52 @@
         },
         {
           "location": {
-            "x": 721,
-            "y": 97
+            "x": 593,
+            "y": 676.375
           },
           "nodeIndex": "Biler",
+          "nodeLineageTag": "863305ac-7097-4721-a0b9-e63ad6d5446b",
           "size": {
             "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 371,
+            "y": 74.625
+          },
+          "nodeIndex": "DimDateTbl",
+          "nodeLineageTag": "b900c5a1-b6be-4af9-b499-4c0ec255cabc",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 683,
+            "y": 96.125
+          },
+          "nodeIndex": "DimLagerstatusTbl",
+          "nodeLineageTag": "6815c055-7f9d-4e28-87c4-c8e4f3d9f35c",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 135,
+            "y": 438.375
+          },
+          "nodeIndex": "DimCarmodelTbl",
+          "nodeLineageTag": "4b4c26ad-f371-4cce-b4dd-0fdacbce42fb",
+          "size": {
+            "height": 176,
             "width": 234
           },
           "zIndex": 0

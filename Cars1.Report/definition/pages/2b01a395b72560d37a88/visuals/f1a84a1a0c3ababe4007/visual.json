@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "5de8f0df2bbd9931e0ec",
+  "name": "f1a84a1a0c3ababe4007",
   "position": {
-    "x": 10.168087538788177,
+    "x": 595,
     "y": 0,
-    "z": 0,
-    "height": 647.01146496815284,
-    "width": 574.76452719255269,
-    "tabOrder": 0
+    "z": 1,
+    "height": 647,
+    "width": 575,
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,11 +23,11 @@
                       "Entity": "Biler"
                     }
                   },
-                  "Property": "Model"
+                  "Property": "Farve"
                 }
               },
-              "queryRef": "factbiler.Model",
-              "nativeQueryRef": "Model"
+              "queryRef": "Biler.Farve",
+              "nativeQueryRef": "Farve"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "MeasureTbl"
                     }
                   },
-                  "Property": "Total sales"
+                  "Property": "Omsætning kun på solgte bilerOmsaetning Solgt"
                 }
               },
-              "queryRef": "MeasureTbl.Total sales",
-              "nativeQueryRef": "Total sales"
+              "queryRef": "MeasureTbl.Omsætning kun på solgte bilerOmsaetning Solgt",
+              "nativeQueryRef": "Omsætning kun på solgte bilerOmsaetning Solgt"
             }
           ]
         }
@@ -52,7 +52,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0015ae9a782ccd3e9cd5",
+        "name": "82b62831418842bb470d",
         "field": {
           "Column": {
             "Expression": {
@@ -60,13 +60,13 @@
                 "Entity": "Biler"
               }
             },
-            "Property": "Model"
+            "Property": "Farve"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "b79abe2f04e908a44a36",
+        "name": "531e03b8654e042756b1",
         "field": {
           "Measure": {
             "Expression": {
@@ -74,7 +74,7 @@
                 "Entity": "MeasureTbl"
               }
             },
-            "Property": "Total sales"
+            "Property": "Omsætning kun på solgte bilerOmsaetning Solgt"
           }
         },
         "type": "Advanced"

@@ -30,6 +30,13 @@ table MeasureTbl
 		formatString: 0
 		lineageTag: 35f224ca-0a90-418e-bfb7-bbfd1629ca30
 
+	measure 'Omsætning kun på solgte bilerOmsaetning Solgt' =
+			
+			CALCULATE(
+			  SUM(Biler[Pris]),Biler[Status]="Solgt")
+		formatString: 0
+		lineageTag: dba11530-b9cf-4db5-81c5-0596ea0bacda
+
 	column Key
 		lineageTag: 0f6b595f-5ae6-4a2f-9612-9cc222366ec6
 		isNameInferred

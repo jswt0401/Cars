@@ -1,75 +1,57 @@
 table DimDateTbl
-	lineageTag: 771cc124-c2e3-4304-9744-ba916f5f2625
+	lineageTag: b900c5a1-b6be-4af9-b499-4c0ec255cabc
 
 	column Date
-		lineageTag: f5709bdc-63c5-4fd7-859c-1ab787f1b14b
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [Date]
-
-		annotation SummarizationSetBy = Automatic
+		dataType: dateTime
+		lineageTag: a79ec942-95fb-4cbe-b357-7ea94500cd5a
+		sourceColumn: Date
 
 	column DateID
-		lineageTag: 87240037-9403-4aed-9574-7a656a75da15
-		summarizeBy: count
-		isNameInferred
-		sourceColumn: [DateID]
-
-		annotation SummarizationSetBy = Automatic
+		dataType: int64
+		lineageTag: ad276a8b-912e-4b14-9e45-3988c3594814
+		sourceColumn: DateID
 
 	column År
-		lineageTag: 969b7b72-4d41-48f3-85f7-1236aa7b0ea1
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: [År]
-
-		annotation SummarizationSetBy = Automatic
+		dataType: int64
+		lineageTag: 0685a2c4-f31f-47f0-8204-dd3b2b27020c
+		sourceColumn: År
 
 	column Måned
-		lineageTag: 27439be5-b173-4352-b42f-f0174f13ea09
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: [Måned]
-
-		annotation SummarizationSetBy = Automatic
+		dataType: int64
+		lineageTag: 5b15dda6-e1b8-49db-bb59-b768468e39b3
+		sourceColumn: Måned
 
 	column MånedNavn
-		lineageTag: 22e07c2a-d864-4b1f-a0c0-981c835d9923
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [MånedNavn]
-
-		annotation SummarizationSetBy = Automatic
+		dataType: string
+		lineageTag: b8152922-0a7b-4209-ab04-3d6a46fc7e04
+		sourceColumn: MånedNavn
 
 	column Kvartal
-		lineageTag: 9f93ac26-30bd-4aaa-a951-4ddd10547964
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [Kvartal]
-
-		annotation SummarizationSetBy = Automatic
+		dataType: string
+		lineageTag: bcf1850c-0962-4940-8322-ea0f93bf2b9f
+		sourceColumn: Kvartal
 
 	column UgeDag
-		lineageTag: f0085689-87f7-4598-9445-f8f0441dabd3
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [UgeDag]
+		dataType: string
+		lineageTag: 3f9043ad-724f-4896-a14a-9efac886a15b
+		sourceColumn: UgeDag
 
-		annotation SummarizationSetBy = Automatic
-
-	partition DimDateTbl = calculated
+	partition DimDateTbl = m
 		mode: import
 		source =
-				VAR StartDate = DATE(2020,1,1)
-				VAR EndDate = DATE(2030,12,31)
-				RETURN
-				ADDCOLUMNS(
-				    CALENDAR(StartDate, EndDate),
-				    "DateID", YEAR([Date])*10000 + MONTH([Date])*100 + DAY([Date]),
-				    "År", YEAR([Date]),
-				    "Måned", MONTH([Date]),
-				    "MånedNavn", FORMAT([Date], "MMMM", "da-DK"),
-				    "Kvartal", "K" & FORMAT([Date], "Q"),
-				    "UgeDag", FORMAT([Date], "dddd", "da-DK")
-				)
+				let
+				    StartDate = #date(2024, 1, 1),
+				    EndDate = #date(2025, 12, 31),
+				    NumberOfDays = Duration.Days(EndDate - StartDate) + 1,
+				    DateList = List.Dates(StartDate, NumberOfDays, #duration(1, 0, 0, 0)),
+				    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}),
+				    ChangedType = Table.TransformColumnTypes(DateTable, {{"Date", type date}}),
+				    AddedDateID = Table.AddColumn(ChangedType, "DateID", each Date.Year([Date]) * 10000 + Date.Month([Date]) * 100 + Date.Day([Date]), Int64.Type),
+				    AddedYear = Table.AddColumn(AddedDateID, "År", each Date.Year([Date]), Int64.Type),
+				    AddedMonth = Table.AddColumn(AddedYear, "Måned", each Date.Month([Date]), Int64.Type),
+				    AddedMonthName = Table.AddColumn(AddedMonth, "MånedNavn", each Date.MonthName([Date]), type text),
+				    AddedQuarter = Table.AddColumn(AddedMonthName, "Kvartal", each "Q" & Text.From(Date.QuarterOfYear([Date])), type text),
+				    AddedDayName = Table.AddColumn(AddedQuarter, "UgeDag", each Date.DayOfWeekName([Date]), type text)
+				in
+				    AddedDayName
 

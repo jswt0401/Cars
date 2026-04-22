@@ -1,76 +1,52 @@
 table DimCarmodelTbl
-	lineageTag: 7679a069-e72c-4bd0-b070-f6cfa8219541
-
-	column ModelID
-		lineageTag: 3365da06-0477-4c4a-be01-dd3031796c79
-		summarizeBy: count
-		isNameInferred
-		sourceColumn: [ModelID]
-
-		annotation SummarizationSetBy = Automatic
-
-	column Maerke
-		lineageTag: 076f547e-2cf2-403e-adfe-36c597214631
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [Maerke]
-
-		annotation SummarizationSetBy = Automatic
+	lineageTag: 4b4c26ad-f371-4cce-b4dd-0fdacbce42fb
 
 	column Model
-		lineageTag: a3537687-9fa8-4a49-903e-1fcb4551f75c
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [Model]
+		dataType: string
+		lineageTag: c9af809c-5b19-48db-ab4a-405c29c262b3
+		sourceColumn: Model
 
-		annotation SummarizationSetBy = Automatic
+	column Mærke
+		dataType: string
+		lineageTag: e9573a85-c0bd-499e-9df3-4d861e5198f6
+		sourceColumn: Mærke
 
-	column Segment
-		lineageTag: 99330510-9618-46a7-93bf-a2e7f7965826
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [Segment]
+	column Karosseri
+		dataType: string
+		lineageTag: 479ad202-83c2-4b1d-b63f-4ba153796b1e
+		sourceColumn: Karosseri
 
-		annotation SummarizationSetBy = Automatic
+	column Drivlinje
+		dataType: string
+		lineageTag: 6e8121dc-efd5-4e1c-a611-6392bd6f29ac
+		sourceColumn: Drivlinje
 
-	column Raekkeviddekm
-		lineageTag: ad51ede5-b98c-4b86-9324-a839801ba978
-		summarizeBy: sum
-		isNameInferred
-		sourceColumn: [Raekkeviddekm]
-
-		annotation SummarizationSetBy = Automatic
-
-	partition DimCarmodelTbl = calculated
+	partition DimCarmodelTbl = m
 		mode: import
 		source =
-				DATATABLE(
-				    "ModelID",      INTEGER,
-				    "Maerke",       STRING,
-				    "Model",        STRING,
-				    "Segment",      STRING,
-				    "Raekkeviddekm",INTEGER,
-				    {
-				        {101,"Tesla",      "Model 3",        "Sedan",    576},
-				        {102,"Tesla",      "Model Y",        "SUV",      533},
-				        {103,"Tesla",      "Model S",        "Sedan",    652},
-				        {104,"Tesla",      "Model X",        "SUV",      580},
-				        {105,"Volkswagen", "ID.3",           "Hatchback",426},
-				        {106,"Volkswagen", "ID.4",           "SUV",      520},
-				        {107,"Audi",       "Q4 e-tron",      "SUV",      520},
-				        {108,"BMW",        "i4",             "Sedan",    590},
-				        {109,"BMW",        "iX3",            "SUV",      458},
-				        {110,"Mercedes",   "EQA",            "SUV",      426},
-				        {111,"Hyundai",    "IONIQ 5",        "SUV",      507},
-				        {112,"Hyundai",    "IONIQ 6",        "Sedan",    614},
-				        {113,"Kia",        "EV6",            "SUV",      528},
-				        {114,"Kia",        "EV9",            "SUV",      563},
-				        {115,"Polestar",   "Polestar 2",     "Sedan",    551},
-				        {116,"Volvo",      "XC40 Recharge",  "SUV",      423},
-				        {117,"Ford",       "Mustang Mach-E", "SUV",      490},
-				        {118,"Nissan",     "Ariya",          "SUV",      533},
-				        {119,"Renault",    "Megane E-Tech",  "Hatchback",470},
-				        {120,"Skoda",      "Enyaq",          "SUV",      543}
-				    }
-				)
+				let
+				    Source = Table.FromRows({
+				        {"Model 3", "Tesla", "Sedan", "EV"},
+				        {"Model S", "Tesla", "Sedan", "EV"},
+				        {"Model X", "Tesla", "SUV", "EV"},
+				        {"Model Y", "Tesla", "SUV", "EV"},
+				        {"Cybertruck", "Tesla", "Pickup", "EV"},
+				        {"Model 2", "Tesla", "Hatchback", "EV"},
+				        {"Roadster", "Tesla", "Coupe", "EV"},
+				        {"Semi", "Tesla", "Lastbil", "EV"},
+				        {"i3", "BMW", "Hatchback", "EV"},
+				        {"i4", "BMW", "Sedan", "EV"},
+				        {"iX", "BMW", "SUV", "EV"},
+				        {"iX3", "BMW", "SUV", "EV"},
+				        {"e-tron", "Audi", "SUV", "EV"},
+				        {"e-tron GT", "Audi", "Sedan", "EV"},
+				        {"ID.3", "Volkswagen", "Hatchback", "EV"},
+				        {"ID.4", "Volkswagen", "SUV", "EV"},
+				        {"EQC", "Mercedes", "SUV", "EV"},
+				        {"EQS", "Mercedes", "Sedan", "EV"},
+				        {"Taycan", "Porsche", "Sedan", "EV"},
+				        {"Mustang Mach-E", "Ford", "SUV", "EV"}
+				    }, {"Model", "Mærke", "Karosseri", "Drivlinje"})
+				in
+				    Source
 
