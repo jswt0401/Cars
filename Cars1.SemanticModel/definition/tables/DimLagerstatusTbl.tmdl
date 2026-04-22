@@ -1,0 +1,33 @@
+table DimLagerstatusTbl
+	lineageTag: cc52cb0f-54a2-413e-97e5-ee438e0e0cd1
+
+	column LagerID
+		lineageTag: cc89c057-fd9b-428e-bce8-a2bd904c2914
+		isNameInferred
+		sourceColumn: [LagerID]
+
+	column LagerStatus
+		lineageTag: 6999c761-be94-465c-8e93-43dd136ce8c5
+		isNameInferred
+		sourceColumn: [LagerStatus]
+
+	column Beskrivelse
+		lineageTag: 013fdba0-f809-4b24-81be-124f43b703d9
+		isNameInferred
+		sourceColumn: [Beskrivelse]
+
+	partition DimLagerstatusTbl = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "LagerID",    INTEGER,
+				    "LagerStatus",STRING,
+				    "Beskrivelse", STRING,
+				    {
+				        {1,"Paa lager",  "Bilen er paa lager og klar til levering"},
+				        {2,"Reserveret","Bilen er reserveret af en kunde"},
+				        {3,"I transit", "Bilen er undervejs fra producenten"},
+				        {4,"Bestilt",   "Bilen er bestilt men ikke modtaget"}
+				    }
+				)
+

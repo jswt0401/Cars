@@ -1,0 +1,22 @@
+model Model
+	culture: da-DK
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["factbiler"]
+
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+
+ref table factbiler
+ref table DimDateTbl
+ref table DimCarmodelTbl
+ref table DimLagerstatusTbl
+ref table MeasureTbl
+
+ref cultureInfo da-DK
+

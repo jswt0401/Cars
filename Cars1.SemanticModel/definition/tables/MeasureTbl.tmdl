@@ -1,0 +1,37 @@
+table MeasureTbl
+	lineageTag: be53532e-0eb0-4560-a10d-ffb6c281ec95
+
+	/// Samlet salgspris for alle transaktioner
+	measure 'Total Omsaetning' = SUM(factbiler[Salgspris])
+		formatString: #,0 kr
+		lineageTag: 3f0a84f0-11ed-4af1-bc1e-2d61d7173cc3
+
+	/// Antal salgslinjer i factbiler
+	measure 'Antal Salg' = COUNTROWS(factbiler)
+		formatString: #,0
+		lineageTag: 88c09e89-d13a-4113-9f4a-5992a7101f66
+
+	/// Gennemsnitlig salgspris pr. transaktion
+	measure 'Gns Salgspris' = AVERAGE(factbiler[Salgspris])
+		formatString: #,0 kr
+		lineageTag: 39ac389e-a868-40d0-8b50-ed23a7ecbde9
+
+	/// Samlet daekningsbidrag (Salgspris x Antal)
+	measure 'Total Daekningsbidrag' = SUM(factbiler[Dækningsbidrag])
+		formatString: #,0 kr
+		lineageTag: df27f91f-d036-4d35-a595-9011c6b7c4c7
+
+	/// Samlet antal solgte biler
+	measure 'Antal Biler Solgt' = SUM(factbiler[Antal])
+		formatString: #,0 stk
+		lineageTag: 999e4447-f767-445f-8af6-28f46ebd1db7
+
+	column Key
+		lineageTag: 0f6b595f-5ae6-4a2f-9612-9cc222366ec6
+		isNameInferred
+		sourceColumn: [Key]
+
+	partition MeasureTbl = calculated
+		mode: import
+		source = DATATABLE("Key", INTEGER, {{0}})
+

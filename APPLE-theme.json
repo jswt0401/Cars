@@ -1,0 +1,42 @@
+{
+  "name": "Apple-Full-Contrast",
+  "dataColors": ["#007AFF", "#34C759", "#AF52DE", "#FF9500", "#FF2D55", "#5856D6", "#FF3B30", "#5AC8FA"],
+  "background": "#000000",
+  "secondaryBackground": "#111111",
+  "firstLevelElements": "#FFFFFF",
+  "secondLevelElements": "#E0E0E0",
+  "thirdLevelElements": "#333333",
+  "tableAccent": "#FFFFFF",
+  "good": "#34C759",
+  "neutral": "#FF9500",
+  "bad": "#FF3B30",
+  "textClasses": {
+    "callout": {"fontSize": 32, "fontFace": "Segoe UI Light", "color": "#FFFFFF"},
+    "title":   {"fontSize": 14, "fontFace": "Segoe UI Semibold", "color": "#FFFFFF"},
+    "header":  {"fontSize": 11, "fontFace": "Segoe UI", "color": "#E0E0E0"},
+    "label":   {"fontSize": 10, "fontFace": "Segoe UI", "color": "#E0E0E0"}
+  },
+  "visualStyles": {
+    "*": {"*": {
+      "general": [{"keepLayerOrder": true}],
+      "background": [{"show": true, "color": {"solid": {"color": "#111111"}}, "transparency": 0}],
+      "border": [{"show": true, "color": {"solid": {"color": "#FFFFFF"}}, "radius": 8}],
+      "visualHeader": [{"show": false}],
+      "title": [{"show": true}],
+      "legend": [{"show": true, "position": "Top", "labelColor": {"solid": {"color": "#E0E0E0"}}, "fontFamily": "Segoe UI", "fontSize": 10}]
+    }},
+    "tableEx": {"*": {
+      "grid": [{"gridVertical": false, "gridHorizontal": true, "gridHorizontalColor": {"solid": {"color": "#333333"}}, "outlineColor": {"solid": {"color": "#FFFFFF"}}, "rowPadding": 4, "textSize": 11}],
+      "columnHeaders": [{"fontColor": {"solid": {"color": "#000000"}}, "backColor": {"solid": {"color": "#FFFFFF"}}, "fontFamily": "Segoe UI Semibold", "fontSize": 11}],
+      "values": [{"fontColorPrimary": {"solid": {"color": "#FFFFFF"}}, "backColorPrimary": {"solid": {"color": "#111111"}}, "fontColorSecondary": {"solid": {"color": "#FFFFFF"}}, "backColorSecondary": {"solid": {"color": "#000000"}}, "fontFamily": "Segoe UI", "fontSize": 11}]
+    }},
+    "card": {"*": {
+      "labels": [{"color": {"solid": {"color": "#FFFFFF"}}, "fontSize": 32}],
+      "categoryLabels": [{"color": {"solid": {"color": "#E0E0E0"}}, "fontSize": 10}]
+    }},
+    "page": {"*": {
+      "background": [{"color": {"solid": {"color": "#000000"}}, "transparency": 0}],
+      "outspace": [{"color": {"solid": {"color": "#000000"}}}]
+    }}
+  }
+}

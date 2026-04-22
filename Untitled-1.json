@@ -1,0 +1,44 @@
+{
+  "name": "Dark-Blue-White-Contrast",
+  "dataColors": ["#002D62", "#004080", "#0059B3", "#0073E6", "#001F3F", "#0B3D91", "#1E4D8C", "#2E5B9A"],
+  "background": "#000000",
+  "secondaryBackground": "#111111",
+  "firstLevelElements": "#FFFFFF",
+  "secondLevelElements": "#E0E0E0",
+  "thirdLevelElements": "#333333",
+  "fourthLevelElements": "#444444",
+  "tableAccent": "#FFFFFF",
+  "good": "#00C853",
+  "neutral": "#FFD600",
+  "bad": "#D50000",
+  "textClasses": {
+    "callout": {"fontSize": 32, "fontFace": "Segoe UI Light", "color": "#FFFFFF"},
+    "title":   {"fontSize": 14, "fontFace": "Segoe UI Semibold", "color": "#FFFFFF"},
+    "header":  {"fontSize": 11, "fontFace": "Segoe UI", "color": "#E0E0E0"},
+    "label":   {"fontSize": 10, "fontFace": "Segoe UI", "color": "#E0E0E0"}
+  },
+  "visualStyles": {
+    "*": {"*": {
+      "general": [{"keepLayerOrder": true}],
+      "background": [{"show": true, "color": {"solid": {"color": "#111111"}}, "transparency": 0}],
+      "border": [{"show": true, "color": {"solid": {"color": "#FFFFFF"}}, "radius": 5}],
+      "dropShadow": [{"show": false}],
+      "visualHeader": [{"show": true}],
+      "title": [{"show": true}],
+      "legend": [{"show": true, "position": "Top", "labelColor": {"solid": {"color": "#FFFFFF"}}, "fontFamily": "Segoe UI", "fontSize": 10}]
+    }},
+    "tableEx": {"*": {
+      "grid": [{"gridVertical": false, "gridHorizontal": true, "gridHorizontalColor": {"solid": {"color": "#333333"}}, "outlineColor": {"solid": {"color": "#FFFFFF"}}}],
+      "columnHeaders": [{"fontColor": {"solid": {"color": "#000000"}}, "backColor": {"solid": {"color": "#FFFFFF"}}}],
+      "values": [{"fontColorPrimary": {"solid": {"color": "#FFFFFF"}}, "backColorPrimary": {"solid": {"color": "#111111"}}, "fontColorSecondary": {"solid": {"color": "#FFFFFF"}}, "backColorSecondary": {"solid": {"color": "#000000"}}}]
+    }},
+    "card": {"*": {
+      "labels": [{"color": {"solid": {"color": "#FFFFFF"}}}],
+      "categoryLabels": [{"color": {"solid": {"color": "#E0E0E0"}}}]
+    }},
+    "page": {"*": {
+      "background": [{"color": {"solid": {"color": "#000000"}}, "transparency": 0}],
+      "outspace": [{"color": {"solid": {"color": "#000000"}}}]
+    }}
+  }
+}

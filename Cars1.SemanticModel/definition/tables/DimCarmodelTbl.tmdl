@@ -1,0 +1,61 @@
+table DimCarmodelTbl
+	lineageTag: 7679a069-e72c-4bd0-b070-f6cfa8219541
+
+	column ModelID
+		lineageTag: 3365da06-0477-4c4a-be01-dd3031796c79
+		isNameInferred
+		sourceColumn: [ModelID]
+
+	column Maerke
+		lineageTag: 076f547e-2cf2-403e-adfe-36c597214631
+		isNameInferred
+		sourceColumn: [Maerke]
+
+	column Model
+		lineageTag: a3537687-9fa8-4a49-903e-1fcb4551f75c
+		isNameInferred
+		sourceColumn: [Model]
+
+	column Segment
+		lineageTag: 99330510-9618-46a7-93bf-a2e7f7965826
+		isNameInferred
+		sourceColumn: [Segment]
+
+	column Raekkeviddekm
+		lineageTag: ad51ede5-b98c-4b86-9324-a839801ba978
+		isNameInferred
+		sourceColumn: [Raekkeviddekm]
+
+	partition DimCarmodelTbl = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "ModelID",      INTEGER,
+				    "Maerke",       STRING,
+				    "Model",        STRING,
+				    "Segment",      STRING,
+				    "Raekkeviddekm",INTEGER,
+				    {
+				        {101,"Tesla",      "Model 3",        "Sedan",    576},
+				        {102,"Tesla",      "Model Y",        "SUV",      533},
+				        {103,"Tesla",      "Model S",        "Sedan",    652},
+				        {104,"Tesla",      "Model X",        "SUV",      580},
+				        {105,"Volkswagen", "ID.3",           "Hatchback",426},
+				        {106,"Volkswagen", "ID.4",           "SUV",      520},
+				        {107,"Audi",       "Q4 e-tron",      "SUV",      520},
+				        {108,"BMW",        "i4",             "Sedan",    590},
+				        {109,"BMW",        "iX3",            "SUV",      458},
+				        {110,"Mercedes",   "EQA",            "SUV",      426},
+				        {111,"Hyundai",    "IONIQ 5",        "SUV",      507},
+				        {112,"Hyundai",    "IONIQ 6",        "Sedan",    614},
+				        {113,"Kia",        "EV6",            "SUV",      528},
+				        {114,"Kia",        "EV9",            "SUV",      563},
+				        {115,"Polestar",   "Polestar 2",     "Sedan",    551},
+				        {116,"Volvo",      "XC40 Recharge",  "SUV",      423},
+				        {117,"Ford",       "Mustang Mach-E", "SUV",      490},
+				        {118,"Nissan",     "Ariya",          "SUV",      533},
+				        {119,"Renault",    "Megane E-Tech",  "Hatchback",470},
+				        {120,"Skoda",      "Enyaq",          "SUV",      543}
+				    }
+				)
+

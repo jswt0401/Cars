@@ -1,0 +1,19 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Power BI
+*.pbix.lock
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Credentials
+*.env
+Key.txt
+*.key
+*.secret
+
+# OS
+.DS_Store

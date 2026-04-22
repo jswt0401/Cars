@@ -1,0 +1,86 @@
+table factbiler
+	lineageTag: 863305ac-7097-4721-a0b9-e63ad6d5446b
+
+	column SalgsID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b335f91-3500-46c6-9567-0e0d7a4c07eb
+		summarizeBy: count
+		sourceColumn: SalgsID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DatoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 86f46b9c-3b82-43f5-acaa-4133474f1f47
+		summarizeBy: count
+		sourceColumn: DatoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModelID
+		dataType: int64
+		formatString: 0
+		lineageTag: 48d8888f-03c9-46ab-9733-1f1701ccb017
+		summarizeBy: count
+		sourceColumn: ModelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LagerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5431d9fd-3043-41a5-9813-414735dcee65
+		summarizeBy: count
+		sourceColumn: LagerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Antal
+		dataType: int64
+		formatString: 0
+		lineageTag: 1418f640-caba-4231-a999-219e076a75f5
+		summarizeBy: sum
+		sourceColumn: Antal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salgspris
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f977c09-cf2e-4856-9c99-6d79e919fd5b
+		summarizeBy: sum
+		sourceColumn: Salgspris
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kunde
+		dataType: string
+		lineageTag: 2be428cc-911b-4c3c-a3e7-dcf479566302
+		summarizeBy: none
+		sourceColumn: Kunde
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Dækningsbidrag = Salgspris * Antal. Opdater formlen når kostpris er tilgængelig: Salgspris * Antal - Kostpris * Antal
+	column Dækningsbidrag = factbiler[Salgspris] * factbiler[Antal]
+		dataType: int64
+		formatString: #,0
+		lineageTag: 813c9055-f613-4e25-8bf3-e2c279af64be
+		summarizeBy: sum
+
+	partition factbiler = m
+		mode: import
+		source =
+				let
+				    Kilde = Csv.Document(File.Contents("C:\Users\Jeppe\OneDrive\Skrivebord\factbiler.txt"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Hævede overskrifter" = Table.PromoteHeaders(Kilde, [PromoteAllScalars=true]),
+				    #"Ændret type" = Table.TransformColumnTypes(#"Hævede overskrifter",{{"SalgsID", Int64.Type}, {"DatoID", Int64.Type}, {"ModelID", Int64.Type}, {"LagerID", Int64.Type}, {"Antal", Int64.Type}, {"Salgspris", Int64.Type}, {"Kunde", type text}})
+				in
+				    #"Ændret type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

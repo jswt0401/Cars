@@ -1,0 +1,12 @@
+relationship factbiler_DatoID_DimDateTbl_DateID
+	fromColumn: factbiler.DatoID
+	toColumn: DimDateTbl.DateID
+
+relationship factbiler_ModelID_DimCarmodelTbl_ModelID
+	fromColumn: factbiler.ModelID
+	toColumn: DimCarmodelTbl.ModelID
+
+relationship factbiler_LagerID_DimLagerstatusTbl_LagerID
+	fromColumn: factbiler.LagerID
+	toColumn: DimLagerstatusTbl.LagerID
+

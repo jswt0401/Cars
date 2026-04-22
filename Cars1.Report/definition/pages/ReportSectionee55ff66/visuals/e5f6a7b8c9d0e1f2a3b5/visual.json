@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "e5f6a7b8c9d0e1f2a3b5",
+  "position": {
+    "x": 200,
+    "y": 0,
+    "z": 3000,
+    "height": 720,
+    "width": 540,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCarmodelTbl"
+                    }
+                  },
+                  "Property": "Maerke"
+                }
+              },
+              "queryRef": "DimCarmodelTbl.Maerke",
+              "nativeQueryRef": "Maerke",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MeasureTbl"
+                    }
+                  },
+                  "Property": "Antal Biler Solgt"
+                }
+              },
+              "queryRef": "MeasureTbl.Antal Biler Solgt",
+              "nativeQueryRef": "Antal Biler Solgt"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

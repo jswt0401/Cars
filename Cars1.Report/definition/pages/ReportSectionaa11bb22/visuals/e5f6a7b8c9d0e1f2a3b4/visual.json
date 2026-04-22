@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "e5f6a7b8c9d0e1f2a3b4",
+  "position": {
+    "x": 900,
+    "y": 0,
+    "z": 5000,
+    "height": 140,
+    "width": 380,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "MeasureTbl"
+                    }
+                  },
+                  "Property": "Antal Biler Solgt"
+                }
+              },
+              "queryRef": "MeasureTbl.Antal Biler Solgt",
+              "nativeQueryRef": "Antal Biler Solgt"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
